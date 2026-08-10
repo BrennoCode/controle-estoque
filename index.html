@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestão de Estoque</title>
+</head>
+
+<body>
+    <header>
+    <h1>CONTROLE DE ESTOQUE</h1>
+</header>
+
+<section>
+    <h2>PRODUTOS</h2>
+
+    <p>PRODUTO | ESTOQUE | CATEGORIA</p>
+</section>
+
+<section>
+    <h2>CADASTRAR PRODUTO</h2>
+<div>
+    <label FOR="nome-produto">Nome do Produto</label>
+    <input type="text" id="nome-produto">
+</div>
+
+<div>
+    <label FOR="codigo-produto">Código</label>
+    <input type="number" id="codigo-produto" placeholder="Ex: NFE201203">
+</div>
+    <form id="form-produtos">
+
+        <label for="form-produtos">Produto</label>
+        <input type="text" id="nome-produto" name="nomeProduto" placeholder="Ex: Mouse sem fio"
+        required>
+
+        <label for="quantidade-inicial">Quantidade</label>
+        <input type="number" id="quantidade-inicial" name="quantidade-inicial" min="0" value="0" required>
+        
+        <button type="submit">Cadastrar produto</button>
+    </form>
+</section>
+
+<div class="categorias">
+    <label for="categoria-produto">Categoria</label>
+    <select id="categoria-produto" name="categoriaproduto" required>
+        <option value="">Selecione uma categoria</option>
+        <option value="informatica">Informática</option>
+        <option value="escritorio">Escritório</option>
+        <option value="papelaria">Papelaria</option>
+    </select>
+</div>
+
+<div class="pesquisa">
+    <button id="botao-pesquisa">Pesquisar</button>
+    <input type="search" id="pesquisa-produto" name="pesquisaProduto" placeholder="Digite um nome ou código do produto">
+</div>
+
+<div class="tabela-de-produtos">
+    <table>
+        <caption>Lista de produtos cadastrados</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Produto</th>
+            </tr>
+        </thead>
+
+        <tbody id="lista-produtos">
+            <td colspan="6">Nenhum produto cadastrado.</td>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <fieldset>
+        <legend>Tipo de movimentação</legend>
+
+        <label>
+            <input type="radio" name="tipoMovimentacao" value="entrada" required>
+            entrada
+        </label>
+            <input type="radio" name="tipoMovimentacao" value="saida" required>
+            saída
+        <label>
+    </fieldset>
+</div>
+
+<div>
+    <textarea id="motivo-movimentacao" name="motivoMovimentacao" rows="3" placeholder="EX: Compra de fornecedor" required>
+    </textarea>
+</div>
+
+<div>
+    <p id="mensagem-produto" role="status" aria-live="polite">    
+    </p>
+</div>
+<section>
+    <article>
+        <h1>PRODUTOS CADASTRADOS</h1>
+        <p id="total-produtos">0</p>
+    </article>
+</section>
+    </body>
+</html>
