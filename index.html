@@ -30,38 +30,45 @@
 
 <section>
     <h2>Cadastrar Produto</h2>
-<div>
-    <label FOR="nome-produto">Nome do Produto</label>
-    <input type="text" id="nome-produto" placeholder="Ex: Mouse sem fio">
-</div>
-
-<div>
-    <label FOR="codigo-produto">Código</label>
-    <input type="number" id="codigo-produto" placeholder="Ex: NFE201203">
-</div>
     <form id="form-produtos">
+        <div>
+            <label for="nome-produto">Nome do Produto</label>
+            <input type="text" id="nome-produto" placeholder="Ex: Mouse sem fio" name="nomeProduto" required>
+        </div>
 
-        <label for="quantidade-inicial">Quantidade</label>
-        <input type="number" id="quantidade-inicial" name="quantidade-inicial" min="0" value="0" required>
+        <div>
+            <label for="codigo-produto">Código</label>
+            <input type="text" id="codigo-produto" placeholder="Ex: NFE201203" name="codigoProduto" required>
+        </div>
+
+        <div>
+            <label for="quantidade-inicial">Quantidade</label>
+            <input type="number" id="quantidade-inicial" name="quantidadeInicial" min="0" value="0" required>
+        </div>
         
+        <div>
+            <label for="estoque-minimo">Estoque Minimo</label>
+            <input type="number" id="estoque-minimo" name="estoqueMinimo" min="0" value="0" required>
+        </div>
+
+        <div class="categorias">
+            <label for="categoria-produto">Categoria</label>
+            <select id="categoria-produto" name="categoriaProduto" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="informatica">Informática</option>
+                <option value="escritorio">Escritório</option>
+                <option value="papelaria">Papelaria</option>
+            </select>
+        </div>
+
         <button type="submit">Cadastrar produto</button>
+
     </form>
 </section>
 
-<div class="categorias">
-    <label for="categoria-produto">Categoria</label>
-    <select id="categoria-produto" name="categoriaproduto" required>
-        <option value="">Selecione uma categoria</option>
-        <option value="informatica">Informática</option>
-        <option value="escritorio">Escritório</option>
-        <option value="papelaria">Papelaria</option>
-    </select>
-</div>
-
-
 <div class="pesquisa">
     <h2>Produtos</h2>
-    <label for="pesquisa-produto">Produtos</label>
+    <label for="pesquisa-produto">Pesquisar Produtos</label>
     <input type="search" id="pesquisa-produto" name="pesquisaProduto" placeholder="Digite um nome ou código do produto">
     <button id="botao-pesquisa">Pesquisar</button>
 </div>
@@ -74,6 +81,9 @@
             <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Produto</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Situações</th>
             </tr>
         </thead>
 
@@ -98,7 +108,7 @@
 </div>
 
 <div>
-    <textarea id="motivo-movimentacao" name="motivoMovimentacao" rows="3" placeholder="E: Compra de fornecedor" required>
+    <textarea id="motivo-movimentacao" name="motivoMovimentacao" rows="3" placeholder="Ex: Compra de fornecedor" required>
     </textarea>
 </div>
 
@@ -106,21 +116,5 @@
     <p id="mensagem-produto" role="status" aria-live="polite">    
     </p>
 </div>
-
-<div>
-<section>
-    <article>
-        <h3>PRODUTOS CADASTRADOS</h3>
-        <p id="total-produtos">0</p>
-
-        <h3>TOTAL DE total-unidades</h3>
-        <p id="total-unidades">0</p>
-
-        <h3>ESTOQUE BAIXO</h3>
-        <p id="total-estoque-baixo">0</p>
-    </article>
-</section>
-</div>
-
     </body>
 </html>
