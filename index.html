@@ -12,17 +12,27 @@
     <h1>CONTROLE DE ESTOQUE</h1>
 </header>
 
+    <div>
 <section>
-    <h2>PRODUTOS</h2>
+    <article>
+        <h2>Resumo do estoque</h2>
+        <h3>Produtos cadastrados</h3>
+        <p id="total-produtos">0</p>
 
-    <p>PRODUTO | ESTOQUE | CATEGORIA</p>
+        <h3>Total de Unidades</h3>
+        <p id="total-unidades">0</p>
+
+        <h3>Estoque Baixo</h3>
+        <p id="total-estoque-baixo">0</p>
+    </article>
 </section>
+</div>
 
 <section>
-    <h2>CADASTRAR PRODUTO</h2>
+    <h2>Cadastrar Produto</h2>
 <div>
     <label FOR="nome-produto">Nome do Produto</label>
-    <input type="text" id="nome-produto">
+    <input type="text" id="nome-produto" placeholder="Ex: Mouse sem fio">
 </div>
 
 <div>
@@ -30,10 +40,6 @@
     <input type="number" id="codigo-produto" placeholder="Ex: NFE201203">
 </div>
     <form id="form-produtos">
-
-        <label for="form-produtos">Produto</label>
-        <input type="text" id="nome-produto" name="nomeProduto" placeholder="Ex: Mouse sem fio"
-        required>
 
         <label for="quantidade-inicial">Quantidade</label>
         <input type="number" id="quantidade-inicial" name="quantidade-inicial" min="0" value="0" required>
@@ -52,9 +58,12 @@
     </select>
 </div>
 
+
 <div class="pesquisa">
-    <button id="botao-pesquisa">Pesquisar</button>
+    <h2>Produtos</h2>
+    <label for="pesquisa-produto">Produtos</label>
     <input type="search" id="pesquisa-produto" name="pesquisaProduto" placeholder="Digite um nome ou código do produto">
+    <button id="botao-pesquisa">Pesquisar</button>
 </div>
 
 <div class="tabela-de-produtos">
@@ -89,7 +98,7 @@
 </div>
 
 <div>
-    <textarea id="motivo-movimentacao" name="motivoMovimentacao" rows="3" placeholder="EX: Compra de fornecedor" required>
+    <textarea id="motivo-movimentacao" name="motivoMovimentacao" rows="3" placeholder="E: Compra de fornecedor" required>
     </textarea>
 </div>
 
@@ -97,11 +106,21 @@
     <p id="mensagem-produto" role="status" aria-live="polite">    
     </p>
 </div>
+
+<div>
 <section>
     <article>
-        <h1>PRODUTOS CADASTRADOS</h1>
+        <h3>PRODUTOS CADASTRADOS</h3>
         <p id="total-produtos">0</p>
+
+        <h3>TOTAL DE total-unidades</h3>
+        <p id="total-unidades">0</p>
+
+        <h3>ESTOQUE BAIXO</h3>
+        <p id="total-estoque-baixo">0</p>
     </article>
 </section>
+</div>
+
     </body>
 </html>
