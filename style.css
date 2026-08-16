@@ -106,3 +106,36 @@ fieldset label{
     gap: 6px;
     font-weight: 400;
 }
+
+.resumo-cards{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card-resumo{
+    padding: 20px;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cord-destaque);
+    border-radius: 10px;
+}
+
+.card-resumo h3{
+    margin: 0 0 10px;
+    color: var(--cor-texto-secundario);
+    font-size: 1rem;
+}
+
+.card-resumo p {
+    margin: 0;
+    color: var(--cord-destaque);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px){ 
+    .resumo-cards{
+        grid-template-columns: 1fr;
+    }
+}
